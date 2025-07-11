@@ -1,0 +1,83 @@
+RGB = []
+Red = 0
+Green = 0
+Blue = 0
+
+def HexToDec(num):
+    HexNum = 0
+    for i in range(len(num) - 1, -1, -1):
+        digit = num[i]
+        Section = pow(16, len(num) - (i + 1))
+
+        if digit == "0":
+            continue
+
+        elif digit == "1":
+            HexNum += 1 * Section
+            print("+ " + str(1 * Section))
+
+        elif digit == "2":
+            HexNum += 2 * Section
+            print("+ " + str(2 * Section))
+
+        elif digit == "3":
+            HexNum += 3 * Section
+            print("+ " + str(3 * Section))
+
+        elif digit == "4":
+            HexNum += 4 * Section
+            print("+ " + str(4 * Section))
+
+        elif digit == "5":
+            HexNum += 5 * Section
+            print("+ " + str(5 * Section))
+
+        elif digit == "6":
+            HexNum += 6 * Section
+            print("+ " + str(6 * Section))
+
+        elif digit == "7":
+            HexNum += 7 * Section
+            print("+ " + str(7 * Section))
+
+        elif digit == "8":
+            HexNum += 8 * Section
+            print("+ " + str(8 * Section))
+
+        elif digit == "9":
+            HexNum += 9 * Section
+            print("+ " + str(9 * Section))
+
+        elif digit == "a":
+            HexNum += 10 * Section
+            print("+ " + str(10 * Section))
+
+        elif digit == "b":
+            HexNum += 11 * Section
+            print("+ " + str(11 * Section))
+
+        elif digit == "c":
+            HexNum += 12 * Section
+            print("+ " + str(12 * Section))
+
+        elif digit == "d":
+            HexNum += 13 * Section
+            print("+ " + str(13 * Section))
+
+        elif digit == "e":
+            HexNum += 14 * Section
+            print("+ " + str(14 * Section))
+
+        elif digit == "f":
+            HexNum += 15 * Section
+            print("+ " + str(15 * Section))
+        
+        else:
+            print("Invalid Character")
+
+    return HexNum
+
+
+while True:
+    Hex = input("Please enter HexCode(#ffe690): ")
+    print(HexToDec(str(Hex)))      
